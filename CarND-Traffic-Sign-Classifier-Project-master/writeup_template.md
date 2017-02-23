@@ -247,8 +247,18 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 6 of the 9 traffic signs, which gives an accuracy of 67%. 
 I am not satisfied with accuracy of it. Cleary model can be better. 
-Strangely most clear images sign 50km/h,Stop,Children crossin it did not accurately predict. I feel this is due preprocessing.
+Strangely most clear images sign 50km/h,Stop,Children crossing it did not accurately predict. I feel this is due preprocessing.
 What i would do to improve model performance and accuracy is: Augment the Training Data, fallow step by step MCDNN pre processing. 
+
+Adding additional explanation:
+
+The accuracy on the new sign images is 67% while it perfomed with 94% on the testing set thus it seems the model is overfitting.
+Model did not do well on new data. I see that clear images sign 50km/h,Stop,Children crossing model did not reckognize.
+This can be improved by:
+* improving preprocessing of images: Augment the Training Data, fallow step by step MCDNN pre processing. 
+* incresing number of examples of training images
+* improve model adding additional Convolutional Layers and or Dropouts
+
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
