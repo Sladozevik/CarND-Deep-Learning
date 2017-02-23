@@ -38,8 +38,7 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/Sladozevik/CarND-Deep-Learning/blob/master/CarND-Traffic-Sign-Classifier-Project-master/Traffic_Sign_Classifier.ipynb)
-Also you can find file in submitted zip file  traffic-sign-data.zip 
+You're reading it! and here is a link to my [project code](https://github.com/Sladozevik/CarND-Deep-Learning/blob/master/CarND-Traffic-Sign-Classifier-Project-master/Traffic_Sign_Classifier.ipynb). Also you can find file in submitted zip file traffic-sign-data.zip 
 
 ###Data Set Summary & Exploration
 
@@ -59,10 +58,13 @@ signs data set:
 
 The code for this step is contained in the third, fourth and fifth code cell of the IPython notebook.  
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the images look like.
+Here is an exploratory visualization of the data set.
 
 
+Random images with labels.
 ![alt text][image1]
+
+20 km/h sign in several images
 ![alt text][image2]
 
 ###Design and Test a Model Architecture
@@ -83,22 +85,29 @@ After that i used Histogram Equalization because it enhances contrast and remove
 After Histogram Equalization I zero centered image data (Mean subtraction)
 I completed pre processing by normalizing the image data so the data dimensions are of approximately the same scale.
 Scale of images are:
+
 X Train normalize 1.87209831993
 X Test normalize 1.86566802053
 
-While gray scale and histogram equalization process color axes have been lost so i needed to return it with newaxis function
+During gray scale and histogram equalization process depth axes in data have been lost. I needed to return it with newaxis function (from numpy import newaxis).
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
-Data was provided splitted to Train, Validation and Test set. There was no need to split the data.
-I did not add additional data. I used only existing data. Only thing needed to be done was to shuffle data.
+Data was provided splitted to Train, Validation and Test set.
+I did not add additional data since i wanted to see how my model is working in with defined dataset.
+Before build model i shuffle data.
 
 Data information:
 X_train shape (34799, 32, 32, 3) #(number of images, size, size, depth)
+
 y_train shape (34799,) # (number of images)
+
 X_test shape (12630, 32, 32, 3)
+
 y_test shape (12630,)
+
 X_valid shape (4410, 32, 32, 3)
+
 y_valid shape (4410,)
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
