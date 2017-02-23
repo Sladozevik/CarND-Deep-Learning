@@ -183,39 +183,46 @@ I also added Dropout in 1st fully connected layer and this proved good and Valid
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 
-LeNet since it was easy :)
+Answer:LeNet since it was easy :)
 
 * What were some problems with the initial architecture?
-accuracy did not increase, there was no dropout, to big and complex network, i felt whole DLL was suffering. When reading many blogs and research papers i seen that more simple DLL works well.
+
+Answer: accuracy did not increase, there was no dropout, to big and complex network, i felt whole DLL was suffering. When reading many blogs and research papers i seen that more simple DLL works well.
 
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-See above explanation
+
+Answer: See above explanation
 
 * Which parameters were tuned? How were they adjusted and why?
-Honestly i played with all parameters and changed all layers. 
+
+Answer: Honestly i played with all parameters and changed all layers. After that i started to adjust network according to how i noticed accuracy is changing. 
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-I used CPU for training so i noticed that i need to test my model on lower number of EPOCHS (5-10). If model turned out well i used 100 EPOCH allnighters :)
+
+Answer: I used CPU for training so i noticed that i need to test my model on lower number of EPOCHS (5-10). If model turned out well i used 100 EPOCH allnighters :)
 I noticed that in many cases there was over fitting that is why i added in first fully connected layer Dropout. I used 0.5 but later on when i played it would make sense to to start with 1.0.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
-As Described above i used MCDNN
+
+Answer: As Described above i used MCDNN
 
 * Why did you believe it would be relevant to the traffic sign application?
-It was simple, it had good preprocessing data and it could be easily adjusted. 
+
+Answer: It was simple, it had good preprocessing data and it could be easily adjusted. 
 Reading MCDNN research paper i felt is best network to work with.
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-As you can see Validation accuracy is 95% and Test accuracy is 94%. this means there is no big overfitting and network works well
+
+Answer: As you can see Validation accuracy is 95% and Test accuracy is 94%. this means there is no big overfitting and network works well
 
 
 ###Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are nine German traffic signs that I found on the web:
+Here are nine different traffic signs that I found on the web.
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8] ![alt text][image9]
@@ -225,7 +232,7 @@ All images are different sizes and this was issue in beginning so i needed to re
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 17th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -243,22 +250,33 @@ Here are the results of the prediction:
 
 
 The model was able to correctly guess 6 of the 9 traffic signs, which gives an accuracy of 67%. 
-I am not satisfied with accuracy of it. Cleary 
-This compares favorably to the accuracy on the test set of ...
+I am not satisfied with accuracy of it. Cleary model can be better. 
+Strangely most clear images sign 50km/h,Stop,Children crossin it did not accurately predict. I feel this is due preprocessing.
+What i would do to improve model performance and accuracy is: Augment the Training Data, fallow step by step MCDNN pre processing. 
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 20th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+ The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
+| 1.0        			| Stop sign   									| 
+| 1.0     				| U-turn 										|
 | .05					| Yield											|
 | .04	      			| Bumpy Road					 				|
 | .01				    | Slippery Road      							|
+| Image			        |     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0            		| 30 km/h   									| 
+| 1.0           		| Turn Left										|
+| 1.0        			| Priority road									|
+| 0.96          		| Road work 					 				|
+| 1.0    	      		| Road work 					 				|
+| 0%                 	| children crossing        						|
+| 0%            		| 50 km/h    						     		| 
+| 0%             		| Stop Sign								        | 
+| 1.0           		| Stop sign   									| 
 
-
-For the second image ... 
+As you can see it did not at all correctly predict Children crossing, 50km/h and Stop sign. 
