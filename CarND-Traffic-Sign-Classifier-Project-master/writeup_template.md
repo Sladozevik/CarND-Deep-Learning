@@ -132,11 +132,18 @@ My final model consisted of the following layers:
 | Fully connected		| Input 200 output 43							|
   
 Supporting information:
+
 Shapes of Convolutional layers:
+
 Conv 1 shape: (?, 13, 13, 100)
+
 Conv 2 shape: (?, 5, 5, 150)
+
 fc0 shape: (?, 3750)
+
 fc1 shape: (?, 200)
+
+fc3 sahoe: (?, 43)
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -145,10 +152,15 @@ The code for training the model is in the 11th cell of the ipython notebook.
 To train the model, I used an Adam optimizer (already implemented in the LeNet lab).
 Final settings used were:
 batch size: 196
+
 epochs: 100
+
 learning rate: 0.001
+
 mu: 0
+
 sigma: 0.1
+
 dropout keep probability: 0.5
 
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
@@ -156,20 +168,21 @@ dropout keep probability: 0.5
 The code for calculating the accuracy of the model is located in the 12th cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of # During the model i did not measure training set accuracy 
 * validation set accuracy of 95%
 * test set accuracy of 94%
 
 I started with Lenet network and playing with Pre processing.
-I tried Gray Scale, Mean substraction (Zero Centering) and normalization. Validation accuracy was always aroun 90%.
+I tried Gray Scale, Mean substraction (Zero Centering) and normalization. Validation accuracy was always around 90%.
 This was not enough and i need to change stuff.
 I read and worked on ImageNet Classification with Deep Convolutional Neural Networks from Alex Krizhevsky - AlexNet but it was to complex for me.
 Then i tried Multi-Column Deep Neural Network for Traffic Sign Classifcation (MCDNN) and noticed that i got validation accuracy around 93%.
-After that i preprocessed images as in MCDNN (only Gray, Histogram) and removed 3rd Convolutional layer due it was reducing images to 1x1 size which i felt was to small for Network.
+After that i preprocessed images as in MCDNN (only Gray scale, Histogram) and removed 3rd Convolutional layer due it was reducing images to 1x1 size which i felt was to small for Network. (pixel by pixel).
+it was to small for network and from my understanding in picture size 32x32 you can not get much info from layer of 1x1 pixel. 
 I also added Dropout in 1st fully connected layer and this proved good and Validation accuracy jumped to 95%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
 LeNet since it was easy :)
 
 * What were some problems with the initial architecture?
