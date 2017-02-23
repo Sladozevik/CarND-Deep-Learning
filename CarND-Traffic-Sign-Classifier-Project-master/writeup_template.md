@@ -18,7 +18,6 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/visualization1.jpg "visualization1"
 [image3]: ./examples/gray_scale.jpg "Gray Scale"
 [image4]: ./new_signs/2.png "Traffic Sign 1"
 [image5]: ./new_signs/6.png "Traffic Sign 2"
@@ -44,7 +43,7 @@ You're reading it!  Also you can find project code in file in submitted zip file
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-The code for this step is contained in the second code cell of the IPython notebook.  
+The code for this step is contained in the 2nd code cell of the IPython notebook.  
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -56,7 +55,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
-The code for this step is contained in the third, fourth and fifth code cell of the IPython notebook.  
+The code for this step is contained in the 3rd and 4th code cell of the IPython notebook.  
 
 Here is an exploratory visualization of the data set.
 
@@ -64,14 +63,11 @@ Here is an exploratory visualization of the data set.
 Random images with labels.
 ![alt text][image1]
 
-20 km/h sign in several images
-![alt text][image2]
-
 ###Design and Test a Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-The code for this step is contained in the sixth code cell of the IPython notebook.
+The code for this step is contained in the 5th code cell of the IPython notebook.
 In seventh code cell there is visualization of images after pre processing. 
 
 As a first step, I decided to convert the images to grayscale because it reduces amount of data and 
@@ -112,7 +108,7 @@ y_valid shape (4410,)
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is in the ninth cell of the ipython notebook.
+The code for my final model is in the 8th cell of the ipython notebook.
 
 My final model consisted of the following layers:
 
@@ -147,7 +143,7 @@ fc3 sahoe: (?, 43)
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is in the 11th cell of the ipython notebook. 
+The code for training the model is in the 10th cell of the ipython notebook. 
 
 To train the model, I used an Adam optimizer (already implemented in the LeNet lab).
 Final settings used were:
@@ -165,7 +161,7 @@ dropout keep probability: 0.5
 
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-The code for calculating the accuracy of the model is located in the 12th cell of the Ipython notebook.
+The code for calculating the accuracy of the model is located in the 11th cell of the Ipython notebook.
 
 My final model results were:
 * validation set accuracy of 95%
@@ -232,7 +228,7 @@ All images are different sizes and this was issue in beginning so i needed to re
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the 17th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -256,7 +252,7 @@ What i would do to improve model performance and accuracy is: Augment the Traini
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 19th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
 
  The top five soft max probabilities were
 
