@@ -39,7 +39,7 @@ The goals / steps of this project are the following:
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/Sladozevik/CarND-Deep-Learning/blob/master/CarND-Traffic-Sign-Classifier-Project-master/Traffic_Sign_Classifier.ipynb)
-Also you can find file in submited zip file  traffic-sign-data.zip 
+Also you can find file in submitted zip file  traffic-sign-data.zip 
 
 ###Data Set Summary & Exploration
 
@@ -90,10 +90,10 @@ While gray scale and histogram equalization process color axes have been lost so
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
-Data was provided splited to Train, Validation and Test set. There was no need to split the data.
-I did not add additional data. I used only exisiting data. Only thing needed to be done was to shuffle data.
+Data was provided splitted to Train, Validation and Test set. There was no need to split the data.
+I did not add additional data. I used only existing data. Only thing needed to be done was to shuffle data.
 
-Data inormation:
+Data information:
 X_train shape (34799, 32, 32, 3) #(number of images, size, size, depth)
 y_train shape (34799,) # (number of images)
 X_test shape (12630, 32, 32, 3)
@@ -103,7 +103,7 @@ y_valid shape (4410,)
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is located in the ninth cell of the ipython notebook.
+The code for my final model is in the ninth cell of the ipython notebook.
 
 My final model consisted of the following layers:
 
@@ -123,7 +123,7 @@ My final model consisted of the following layers:
 | Fully connected		| Input 200 output 43							|
   
 Supporting information:
-Shapes of Convlutional layers:
+Shapes of Convolutional layers:
 Conv 1 shape: (?, 13, 13, 100)
 Conv 2 shape: (?, 5, 5, 150)
 fc0 shape: (?, 3750)
@@ -131,7 +131,7 @@ fc1 shape: (?, 200)
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the 11th cell of the ipython notebook. 
+The code for training the model is in the 11th cell of the ipython notebook. 
 
 To train the model, I used an Adam optimizer (already implemented in the LeNet lab).
 Final settings used were:
@@ -164,7 +164,7 @@ If an iterative approach was chosen:
 LeNet since it was easy :)
 
 * What were some problems with the initial architecture?
-accuracy did not increse, there was no dropout, to big and complex network, i felt whole DLL was suffering. When reading many blogs and research papers i seen that more simple DLL works well.
+accuracy did not increase, there was no dropout, to big and complex network, i felt whole DLL was suffering. When reading many blogs and research papers i seen that more simple DLL works well.
 
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
@@ -182,11 +182,11 @@ If a well known architecture was chosen:
 As Described above i used MCDNN
 
 * Why did you believe it would be relevant to the traffic sign application?
-It was simple, it had good preprocessing data and it could be easyely adjusted. 
+It was simple, it had good preprocessing data and it could be easily adjusted. 
 Reading MCDNN research paper i felt is best network to work with.
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-As you can see Validation accuracy is 95% and Test accuracy is 94%. this menas there is no big overfitting and network works well
+As you can see Validation accuracy is 95% and Test accuracy is 94%. this means there is no big overfitting and network works well
 
 
 ###Test a Model on New Images
@@ -199,7 +199,7 @@ Here are nine German traffic signs that I found on the web:
 ![alt text][image7] ![alt text][image8] ![alt text][image9]
 ![alt text][image10] ![alt text][image11] ![alt text][image12]
 
-All images are different sizes and this was issue in beggining so i needed to reduce size.
+All images are different sizes and this was issue in beginning so i needed to reduce size.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
