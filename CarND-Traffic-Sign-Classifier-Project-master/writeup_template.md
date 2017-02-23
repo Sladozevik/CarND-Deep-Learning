@@ -38,7 +38,7 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/Sladozevik/CarND-Deep-Learning/blob/master/CarND-Traffic-Sign-Classifier-Project-master/Traffic_Sign_Classifier.ipynb). Also you can find file in submitted zip file traffic-sign-data.zip 
+You're reading it!  Also you can find project code in file in submitted zip file traffic-sign-data.zip 
 
 ###Data Set Summary & Exploration
 
@@ -256,7 +256,7 @@ What i would do to improve model performance and accuracy is: Augment the Traini
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 20th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 19th cell of the Ipython notebook.
 
  The top five soft max probabilities were
 
