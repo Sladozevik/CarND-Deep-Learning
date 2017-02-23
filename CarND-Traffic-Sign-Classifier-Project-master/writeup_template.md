@@ -262,13 +262,6 @@ The code for making predictions on my final model is located in the 20th cell of
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0        			| Stop sign   									| 
-| 1.0     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
 | 1.0            		| 30 km/h   									| 
 | 1.0           		| Turn Left										|
 | 1.0        			| Priority road									|
