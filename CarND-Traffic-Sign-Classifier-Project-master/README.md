@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+#**Project: Build a Traffic Sign Recognition Program** 
 
 ##Writeup Ante Sladojevic
 
